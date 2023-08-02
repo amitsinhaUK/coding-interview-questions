@@ -3,6 +3,8 @@
 # Solution Type: Optimised solution, Time O(n), Space O(n)
 # Code Author: Amit Sinha
 #
+
+import array
     
 
 def check_integer_list(integer_list, target_value):
@@ -23,11 +25,11 @@ def check_integer_list(integer_list, target_value):
             
 
 def main():
-    user_integer_list = input("Please enter the list of values you'd like within the list: (enter integers separated by a space): ")
+    user_integer_list = input("Please enter the list of values you'd like within the array: (enter integers separated by a space): ")
 
-    list_of_integers = [int(value) for value in user_integer_list.split()]
+    list_of_integers = array.array('i',([int(value) for value in user_integer_list.split()]))
 
-    target_value = int(input(f"The chosen list is: {list_of_integers}. What would you like the target to be? (type in an integer value): "))
+    target_value = int(input(f"The chosen array is: {list_of_integers}. What would you like the target to be? (type in an integer value): "))
     print(check_integer_list(integer_list=list_of_integers, target_value=target_value))
 
 
